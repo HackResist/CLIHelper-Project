@@ -1,0 +1,64 @@
+/* files/config/css/examples.css */
+
+#command-examples {
+    background-color: var(--secondary-bg-color, #2c2c2c); /* Use CSS variables if defined in styles.css */
+    color: var(--text-color, #e0e0e0);
+    padding: 40px 50px;
+    /* margin: 20px auto; */ /* Remove or comment out the shorthand margin */
+    margin-left: auto;     /* Keep horizontal centering */
+    margin-right: auto;    /* Keep horizontal centering */
+    margin-bottom: 20px;   /* Keep bottom margin */
+    margin-top: 150px;     /* *** ADDED: 150px margin from the top *** */
+    border-radius: 8px;
+    max-width: 600px; /* Match input area width or adjust as needed */
+    border: 1px solid var(--border-color, #444);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Smooth hiding */
+}
+
+#command-examples h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 2.1em;
+    margin: 30px auto;
+    color: var(--accent-color, #61dafb); /* Use accent color if defined */
+    border-bottom: 1px solid var(--border-color, #444);
+    padding-bottom: 10px;
+}
+
+#command-examples ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Arrange items nicely */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px; /* Spacing between items */
+    justify-content: center; /* Center items horizontally */
+}
+
+#command-examples li {
+    margin-bottom: 5px; /* Spacing if wrapping occurs */
+}
+
+#command-examples li code {
+    background-color: var(--code-bg-color, #3a3a3a); /* Use code background if defined */
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95em;
+    cursor: pointer; /* Indicate they are clickable (optional) */
+    transition: background-color 0.2s ease;
+}
+
+#command-examples li code:hover {
+    background-color: var(--code-hover-bg-color, #4f4f4f); /* Slightly lighter on hover */
+}
+
+/* Style for when the examples are hidden */
+#command-examples.hidden {
+    opacity: 0;
+    transform: translateY(-10px); /* Optional: slight move up effect */
+    pointer-events: none; /* Prevent interaction when hidden */
+    /* We don't use display: none directly here if we want transitions,
+       but JS will set display: none after the transition if needed */
+}

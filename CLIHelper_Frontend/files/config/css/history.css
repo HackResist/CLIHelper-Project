@@ -1,0 +1,366 @@
+/* /home/windows/Desktop/Minor Project/CLIHelper Client Side/files/config/css/history.css */
+
+body {
+    /* Inherit font from styles.css or set one */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    padding-top: 80px; /* Add padding if using fixed header elements from styles.css */
+    /* Background/color will be set by styles.css theme */
+}
+
+.history-header {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.history-header h1 {
+    margin-bottom: 15px;
+    /* Color will be set by styles.css theme */
+}
+
+.history-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    font-weight: 500;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.back-button {
+    background-color: #6c757d; /* Grey */
+    color: white;
+}
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+.clear-button {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+.clear-button:hover {
+    background-color: #c82333;
+}
+
+/* Dark Mode Adjustments for Buttons */
+body.dark-mode .back-button {
+    background-color: #555;
+}
+body.dark-mode .back-button:hover {
+    background-color: #666;
+}
+body.dark-mode .clear-button {
+    background-color: #d9534f;
+}
+body.dark-mode .clear-button:hover {
+    background-color: #c9302c;
+}
+
+
+#history-container {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.history-entry {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    background-color: #f9f9f9; /* Light background for entry */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    overflow: hidden; /* Contain floats/margins */
+}
+
+/* Dark Mode History Entry */
+body.dark-mode .history-entry {
+    background-color: #2a2a2a;
+    border-color: #444;
+}
+
+.history-entry .timestamp {
+    font-size: 0.85em;
+    color: #6c757d; /* Grey */
+    margin-bottom: 10px;
+    display: block; /* Ensure it takes its own line */
+}
+body.dark-mode .history-entry .timestamp {
+    color: #aaa;
+}
+
+
+.history-entry .command-section {
+    margin-bottom: 15px;
+}
+
+.history-entry .command-section strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    /* Color inherited from body theme */
+}
+
+.history-entry .command-section code {
+    display: block; /* Make code block take full width */
+    padding: 8px 12px;
+    background-color: #e9ecef; /* Light grey background for command */
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 1em;
+    color: #333; /* Darker text for command */
+    word-wrap: break-word; /* Wrap long commands */
+    white-space: pre-wrap; /* Preserve whitespace */
+}
+body.dark-mode .history-entry .command-section code {
+    background-color: #3a3a3a;
+    color: #eee;
+}
+
+
+.history-entry .explanation-section strong {
+     display: block;
+     margin-bottom: 10px;
+     font-size: 1.1em;
+     /* Color inherited from body theme */
+}
+
+.history-entry .explanation-content {
+    font-size: 0.95em;
+    line-height: 1.6;
+    /* Explanation text color inherited from body theme */
+    /* Styles for code blocks within explanation handled by highlight.js/styles.css */
+}
+
+/* Ensure pre/code inside explanation content uses theme styles */
+.history-entry .explanation-content pre {
+    /* Use styles from styles.css */
+    margin-top: 10px;
+}
+.history-entry .explanation-content code {
+     /* Use styles from styles.css */
+     /* Reset display if needed */
+     display: inline;
+     padding: 2px 4px; /* Adjust if needed */
+}
+
+
+.no-history-message,
+.loading-message {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+    margin-top: 40px;
+}
+body.dark-mode .no-history-message,
+body.dark-mode .loading-message {
+     color: #aaa;
+}
+
+/* Footer styling (if using the one from history.html) */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+body.dark-mode footer {
+    border-top-color: #444;
+    color: #aaa;
+}
+/* /home/windows/Desktop/Minor Project/CLIHelper Client Side/files/config/css/history.css */
+
+/* ... (keep existing styles for body, .history-header, buttons, .history-entry, .timestamp, .command-section etc.) ... */
+
+
+/* --- Styles for the Explanation Section --- */
+
+.history-entry .explanation-section {
+    margin-top: 15px; /* Add some space above the explanation */
+}
+
+.history-entry .explanation-section strong {
+     display: block;
+     margin-bottom: 10px;
+     font-size: 1.1em;
+     /* Color inherited from body theme */
+}
+
+/* --- Apply Response-like Styles to the Explanation Container --- */
+.history-entry .explanation-content {
+    font-size: 0.95em;
+    line-height: 1.6;
+    /* --- Mimic #response styles from styles.css --- */
+    background-color: #e9e9e9; /* Light mode background - ADJUST TO MATCH #response */
+    padding: 15px;             /* Padding - ADJUST TO MATCH #response */
+    border-radius: 4px;        /* Rounded corners - ADJUST TO MATCH #response */
+    border: 1px solid #ccc;    /* Border - ADJUST TO MATCH #response */
+    margin-top: 5px;           /* Space below the "Explanation:" label */
+    /* --- End Mimic #response styles --- */
+}
+
+/* Dark Mode for Explanation Container */
+body.dark-mode .history-entry .explanation-content {
+    background-color: #2b2b2b; /* Dark mode background - ADJUST TO MATCH dark #response */
+    border-color: #555;       /* Dark mode border - ADJUST TO MATCH dark #response */
+    /* Text color should be inherited correctly from dark mode body */
+}
+
+
+/* --- Style PRE blocks within the explanation like in #response --- */
+.history-entry .explanation-content pre {
+    /* --- Mimic #response pre styles from styles.css --- */
+    background-color: #f5f5f5; /* Code block background (light) - ADJUST */
+    padding: 10px;             /* Code block padding - ADJUST */
+    border-radius: 4px;        /* Code block corners - ADJUST */
+    border: 1px solid #ddd;    /* Code block border (light) - ADJUST */
+    overflow-x: auto;          /* Allow horizontal scroll for long lines */
+    white-space: pre-wrap;     /* Wrap lines but preserve spacing */
+    word-wrap: break-word;     /* Break long words */
+    margin-top: 10px;          /* Space above code block */
+    margin-bottom: 10px;       /* Space below code block */
+    /* --- End Mimic #response pre styles --- */
+}
+
+/* Dark Mode for PRE blocks */
+body.dark-mode .history-entry .explanation-content pre {
+    background-color: #1e1e1e; /* Code block background (dark) - ADJUST */
+    border-color: #444;       /* Code block border (dark) - ADJUST */
+    /* Text color within code block usually handled by highlight.js theme */
+}
+
+
+/* --- Style CODE elements (inline and within PRE) like in #response --- */
+.history-entry .explanation-content code {
+    /* --- Mimic #response code styles from styles.css --- */
+    font-family: 'Courier New', monospace; /* Monospace font */
+    font-size: 0.9em;                     /* Slightly smaller font size */
+    /* --- End Mimic #response code styles --- */
+}
+
+/* Style specifically for INLINE code (not inside <pre>) */
+.history-entry .explanation-content p code,
+.history-entry .explanation-content li code,
+.history-entry .explanation-content span code { /* Add other potential parent tags if needed */
+    background-color: rgba(0, 0, 0, 0.06); /* Subtle background for inline code (light) - ADJUST */
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    /* Text color should inherit */
+}
+body.dark-mode .history-entry .explanation-content p code,
+body.dark-mode .history-entry .explanation-content li code,
+body.dark-mode .history-entry .explanation-content span code {
+     background-color: rgba(255, 255, 255, 0.15); /* Subtle background for inline code (dark) - ADJUST */
+}
+
+
+/* Style for CODE inside PRE (often minimal, relies on <pre> and highlight.js) */
+.history-entry .explanation-content pre code {
+    /* --- Mimic #response pre code styles from styles.css --- */
+    background: none; /* Usually no background needed */
+    padding: 0;       /* No extra padding needed */
+    border: none;     /* No border needed */
+    font-size: 1em;   /* Inherit size from pre or set explicitly */
+    /* Color is typically handled by highlight.js theme */
+    /* --- End Mimic #response pre code styles --- */
+}
+
+
+/* ... (keep existing styles for .no-history-message, footer etc.) ... */
+/* /home/windows/Desktop/Minor Project/CLIHelper Client Side/files/config/css/history.css */
+
+/* ... (keep existing styles for body, .history-header, buttons, .history-entry, .timestamp, .command-section etc.) ... */
+
+
+/* --- Simplified Styles for the Explanation Section --- */
+
+.history-entry .explanation-section {
+    margin-top: 15px; /* Space above the explanation */
+}
+
+.history-entry .explanation-section strong {
+     display: block;
+     margin-bottom: 10px; /* Space below the "Explanation:" label */
+     font-size: 1.1em;
+     /* Color inherited from body theme */
+}
+
+/* Basic styling for the explanation content area */
+.history-entry .explanation-content {
+    font-size: 0.95em;
+    line-height: 1.6;
+    /* Removed background, border, padding to simplify */
+    /* Text color inherited from body theme */
+}
+
+/* Basic styling for PRE blocks within the explanation */
+.history-entry .explanation-content pre {
+    background-color: rgba(0, 0, 0, 0.03); /* Very subtle background (light) */
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.08); /* Subtle border (light) */
+}
+
+/* Dark Mode for PRE blocks */
+body.dark-mode .history-entry .explanation-content pre {
+    background-color: rgba(255, 255, 255, 0.05); /* Very subtle background (dark) */
+    border-color: rgba(255, 255, 255, 0.15); /* Subtle border (dark) */
+    /* Text color within code block usually handled by highlight.js theme */
+}
+
+/* Basic styling for CODE elements (inline and within PRE) */
+.history-entry .explanation-content code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+/* Style specifically for INLINE code (not inside <pre>) */
+.history-entry .explanation-content p code,
+.history-entry .explanation-content li code,
+.history-entry .explanation-content span code {
+    background-color: rgba(0, 0, 0, 0.06); /* Subtle background for inline code (light) */
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+body.dark-mode .history-entry .explanation-content p code,
+body.dark-mode .history-entry .explanation-content li code,
+body.dark-mode .history-entry .explanation-content span code {
+     background-color: rgba(255, 255, 255, 0.15); /* Subtle background for inline code (dark) */
+}
+
+/* Style for CODE inside PRE (minimal changes needed) */
+.history-entry .explanation-content pre code {
+    background: none; /* No background needed, rely on <pre> */
+    padding: 0;
+    border: none;
+    font-size: 1em; /* Match pre font size or adjust slightly */
+    /* Color is typically handled by highlight.js theme */
+}
+
+/* ... (keep existing styles for .no-history-message, footer etc.) ... */
+
+/* --- End of CSS Styles for History Page --- */
+/* /home/windows/Desktop/Minor Project/CLIHelper Client Side/files/config/css/history.css */

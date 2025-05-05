@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command History - CLI Helper</title>
+    <link rel="stylesheet" href="../config/css/history.css">
+    <link rel="stylesheet" href="../config/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
+<body>
+    <script>
+        const savedTheme = localStorage.getItem("theme") || "dark-mode";
+        document.body.className = savedTheme;
+    </script>
+    <div class="history-header">
+        <h1>Command History</h1>
+        <div class="history-controls">
+             <a href="../../index.html" class="button back-button">Back to Helper</a>
+             <button id="clear-history-button" class="button clear-button">Clear History</button>
+        </div>
+    </div>
+    <div id="history-container">
+        <p class="loading-message">Loading history...</p>
+    </div>
+    <footer style="position: fixed; bottom: 0; left: 0; right: 0; background-color: #1f1f1f; color: #cccccc;  text-align: center; padding: 10px 0; z-index: 1000;  border-top: 1px solid #333;">
+        <p style="margin: 0;">© 2025 CLIHelper. All rights reserved.</p> 
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="../config/js/function/history.js" defer></script>
+</body>
+</html>

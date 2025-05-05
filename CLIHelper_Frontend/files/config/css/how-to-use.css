@@ -1,0 +1,71 @@
+/* /path/to/your/css/how-to-use.css */
+
+#how-to-use {
+    margin-top: 3em; /* Space above the section */
+    padding: 1.5em;
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 8px;
+    background-color: rgba(230, 230, 230, 0.5); /* Slightly different background */
+    max-width: 800px; /* Match main content width */
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+/* Adjust background for dark mode if needed */
+body.dark-mode #how-to-use {
+    background-color: rgba(50, 50, 50, 0.5);
+    border-color: #555;
+}
+
+
+#how-to-use h2 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    text-align: center;
+    color: #007bff; /* Example accent color */
+}
+
+body.dark-mode #how-to-use h2 {
+    color: #58a6ff; /* Dark mode accent */
+}
+
+#how-to-use p {
+    margin-bottom: 1em;
+}
+
+#how-to-use ol {
+    padding-left: 25px; /* Indent the list */
+    margin-bottom: 1.5em;
+}
+
+#how-to-use li {
+    margin-bottom: 0.75em; /* Space between steps */
+}
+
+#how-to-use .examples {
+    margin-top: 1.5em;
+}
+
+#how-to-use .examples h3 {
+    margin-bottom: 0.75em;
+    font-weight: 600;
+}
+
+/* Style for inline code examples within the text */
+#how-to-use code {
+    background-color: rgba(0, 0, 0, 0.06);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+body.dark-mode #how-to-use code {
+     background-color: rgba(255, 255, 255, 0.15);
+}
+
+#how-to-use ul {
+    list-style: disc;
+    padding-left: 25px;
+}

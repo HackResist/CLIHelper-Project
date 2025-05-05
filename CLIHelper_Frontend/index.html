@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="files/config/img/icons/CliHelper.png" type="image/x-icon">
+    <title>CLIHelper - AI-Powered Linux & Git Command Explainer</title>
+    <link rel="stylesheet" href="files/config/css/styles.css">
+    <link rel="stylesheet" href="files/config/css/how-to-use.css">
+    <link rel="stylesheet" href="files/config/css/examples.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/marked/11.0.0/marked.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+
+<body class="dark-mode">
+    <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="nav-content">
+            <a href="https://github.com/Hackresist" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/lokeshchauhanapex" target="_blank">LinkedIn</a>
+            <a href="https://x.com/Hackresist" target="_blank">Twitter</a>
+            <a href="files/pages/term-condition.html">Terms & Conditions</a>
+            <span id="visit-count">Visits Today: 0</span>
+            <span id="user-ip">Your IP: Loading...</span>
+            <a href="files/pages/history.html">History</a>
+        </div>
+    </nav>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+    <h1 id="title">CLIHELPER</h1>
+
+    <div class="input-container">
+        <input type="text" id="commandInput" placeholder="Enter a Linux or Git command..." />
+        <button onclick="getExplanation()">Explain</button>
+    </div>
+    <div id="response"></div>
+
+    <div id="command-examples">
+        <h3>Try these examples:</h3>
+        <ul>
+            <li><code>ps aux | grep python</code></li>
+            <li><code>tar -czvf archive.tar.gz folder/</code></li>
+            <li><code>curl -I https://example.com</code></li>
+            <li><code>git diff HEAD~1 HEAD</code></li>
+            <li><code>git stash push -m "Quick save"</code></li>
+            <li><code>history | grep ssh</code></li>
+            <li><code>sudo netstat -tulnp</code></li>
+            <li><code>alias gs='git status'</code></li>
+            <li><code>whoami</code></li>
+            <li><code>uptime</code></li>
+            <li><code>df -h</code></li>
+            <li><code>free -m</code></li>
+            <li><code>top</code></li>
+            <li><code>htop</code></li>
+            <li><code>git branch</code></li>
+            <li><code>git checkout -b new-feature</code></li>
+            <li><code>git merge main</code></li>
+            <li><code>rm -rf old_folder</code></li>
+            <li><code>cp source.txt destination.txt</code></li>
+            <li><code>mv old_name.txt new_name.txt</code></li>
+            <li><code>tail -f /var/log/syslog</code></li>
+            <li><code>head -n 10 file.txt</code></li>
+            <li><code>ssh user@hostname</code></li>
+            <li><code>scp file.txt user@hostname:/path/</code></li>
+            <li><code>ping google.com</code></li>
+            <li><code>wget https://example.com/file.zip</code></li>
+            <li><code>sudo apt update && sudo apt upgrade</code></li>
+            <li><code>systemctl status nginx</code></li>
+            <li><code>docker ps -a</code></li>
+            <li><code>kubectl get pods</code></li>
+        </ul>
+    </div>
+    <footer style="position: fixed; bottom: 0; left: 0; right: 0; background-color: #1f1f1f; color: #cccccc;  text-align: center; padding: 10px 0; z-index: 1000;  border-top: 1px solid #333;">
+        <p style="margin: 0;">© 2025 CLIHelper. All rights reserved.</p> 
+    </footer>
+    <script src="files/config/js/function/script.js"></script>
+    <script src="files/config/js/function/menu-toggle.js"></script>
+    <script src="files/config/js/function/typing.js"></script>
+    <script src="files/config/js/function/examples.js"></script>
+</body>
+
+</html>

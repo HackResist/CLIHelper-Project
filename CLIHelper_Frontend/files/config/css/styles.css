@@ -1,0 +1,260 @@
+/* --- Body Full Screen --- */
+html, body {
+    height: 100%; 
+    margin: 0;    /* Remove default browser margin */
+    padding: 0;   /* Remove default browser padding */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    position: relative; /* Needed if using absolute positioning for navbar */
+
+    padding-top: 60px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222222a9;
+    padding: 12px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-content {
+    display: flex; /* Align items horizontally */
+    align-items: center;
+    gap: 15px; /* Space between nav items */
+}
+
+.nav-content a {
+    color: #f5f5f5;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-content a:hover {
+    color: #ffcc00;
+    background-color: #333;
+    border-radius: 230px;
+    border: 1px solid #ffcc00;
+    transition: all 0.1s;
+}
+
+#visit-count, #user-ip {
+    background-color: #222;
+    color: #ffcc00;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #ffcc00;
+    transition: all 0.3s;
+}
+
+#visit-count:hover {
+    background-color: #ffcc00;
+    color: #222;
+    border-color: #222;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 22px;
+    color: #ffcc00;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-content {
+        display: none;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .nav-content.active {
+        display: flex;
+    }
+}
+
+        /* Title */
+        #title {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            color: #4CAF50;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .light-mode #title {
+            color: #007bff;
+        }
+    
+ 
+
+input, button {
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input {
+    width: 60%;
+    margin: 15px 0;
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+      /* Response Box */
+      #response {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        display: none;
+        font-size: 16px;
+        text-align: left;
+        width: 70%;
+        white-space: pre-wrap;
+        font-family: 'Courier New', monospace;
+        line-height: 1.6;
+        position: relative;
+        overflow: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .dark-mode #response {
+        background: #2d2d2d;
+        color: #ffffff;
+        border: 1px solid #4CAF50;
+    }
+    .light-mode #response {
+        background: #ffffff;
+        color: #000000;
+        border: 1px solid #007bff;
+    }
+
+    /* Response Text Styles */
+    .dark-mode #response strong {
+        color: #4CAF50;
+    }
+    .light-mode #response strong {
+        color: #17065b;
+    }
+
+    .dark-mode #response em {
+        color: #00bfff;
+    }
+    .light-mode #response em {
+        color: #007bff;
+    }
+
+    .dark-mode #response h1, 
+    .dark-mode #response h2, 
+    .dark-mode #response h3 {
+        color: #ff7f7f;
+    }
+    .light-mode #response h1, 
+    .light-mode #response h2, 
+    .light-mode #response h3 {
+        color: #ff4d4d;
+    }
+    .theme-toggle {
+        position: fixed; /* Keeps it fixed relative to the viewport */
+        /* Position it top right */
+        top: 15px;     /* Distance from the top edge */
+        right: 20px;   /* Distance from the right edge */ /* <<< CHANGED */
+        z-index: 1001; /* Ensures it's above the navbar (which has z-index: 1000) */
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        font-size: 22px;
+        padding: 10px; /* Padding around the icon */
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.1); /* Subtle background */
+        transition: background 0.3s;
+    }
+     
+
+.dark-mode .theme-toggle {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+ 
+  /* Code Blocks */
+ pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 12px;
+    border-radius: 6px;
+    overflow: auto;
+    font-size: 16px;
+    }
+.light-mode pre {
+    background: #838383;
+    color: black;
+    }
+code {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    padding: 2px 4px;
+    background: #444;
+    border-radius: 4px;
+    color: #ffcc00;
+    }
+.light-mode code {
+    background: #9f9e9e;
+    color: rgb(4, 0, 221);
+    }
+    
