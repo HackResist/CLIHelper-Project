@@ -49,7 +49,7 @@ async function getExplanation() {
 
     try {
         // --- Use the specified API endpoint ---
-        const apiEndpoint = `https://clihelper-gemeni-api.onrender.com/explain?command=${encodeURIComponent(command)}`;
+        const apiEndpoint = `https://clihelper-project.onrender.com/explain?command=${encodeURIComponent(command)}`;
 
         const response = await fetch(apiEndpoint);
 
