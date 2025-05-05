@@ -95,7 +95,7 @@ CLIHelper is a web-based tool designed to help users understand and learn Linux 
     -   Vercel for  frontend.
 
 ## 🎥 Video Guide
-If you're unsure how to host the server, you can watch our step-by-step video tutorial for better understanding. Visit [ByeHexLab](https://www.youtube.com/@ByteHexLab).
+If you're unsure how to host the server, you can watch our step-by-step video tutorial for better understanding. Visit [ByteHexLab](https://www.youtube.com/@ByteHexLab) YouTube.
 
 
 
